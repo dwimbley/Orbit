@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <title>Orbit</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="./toast.css">
+</head>
+<body>
+  <div id="toast" class="fw-toast" role="alert" style="display:none;">
+    <!-- Error icon tile -->
+    <div class="fw-toast-icon-tile">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF9AAB" stroke-width="2.2" stroke-linecap="round">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 8v5M12 16.5v.01"/>
+      </svg>
+    </div>
+
+    <!-- Content -->
+    <div class="fw-toast-body">
+      <div id="toast-title" class="fw-toast-title"></div>
+      <div id="toast-reason" class="fw-toast-reason"></div>
+      <div id="toast-path" class="fw-toast-path" style="display:none;"></div>
+      <div id="toast-unchanged" class="fw-toast-unchanged"></div>
+      <div id="toast-buttons" class="fw-toast-buttons" style="display:none;">
+        <button id="btn-remove" class="fw-toast-btn fw-toast-btn--secondary">Remove from wheel</button>
+        <button id="btn-locate" class="fw-toast-btn fw-toast-btn--primary"></button>
+      </div>
+    </div>
+
+    <!-- Dismiss button -->
+    <button id="btn-dismiss" class="fw-toast-dismiss" aria-label="Dismiss">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A9A6B5" stroke-width="2.4" stroke-linecap="round">
+        <path d="M6 6l12 12M18 6L6 18"/>
+      </svg>
+    </button>
+  </div>
+
+  <script src="./toast.js"></script>
+</body>
+</html>

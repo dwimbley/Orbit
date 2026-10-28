@@ -1,0 +1,15 @@
+{
+  "name": "filewheel-native",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Native N-API addon for FileWheel (Win32 hooks, OLE drop target, shell APIs)",
+  "main": "build/Release/filewheel-native.node",
+  "scripts": {
+    "build": "node-gyp rebuild",
+    "install": "echo Skipping auto-build. Run npm run rebuild-native from project root."
+  },
+  "dependencies": {
+    "node-addon-api": "8.9.2"
+  },
+  "gypfile": true
+}

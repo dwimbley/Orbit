@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <title>Orbit</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="./tray-menu.css">
+</head>
+<body>
+  <div id="tray-menu" class="fw-tray-menu" role="menu" aria-label="Orbit menu">
+    <!-- Header -->
+    <div class="fw-tray-header">
+      <div class="fw-tray-brand">
+        <span id="logo-glyph" class="fw-tray-logo"></span>
+        <span class="fw-tray-title">Orbit</span>
+      </div>
+      <div class="fw-tray-status">
+        <span id="status-dot" class="fw-tray-dot"></span>
+        <span id="status-label" class="fw-tray-status-text">Active</span>
+      </div>
+    </div>
+
+    <div class="fw-tray-divider"></div>
+
+    <!-- Menu items -->
+    <div id="menu-items" class="fw-tray-items">
+      <div class="fw-tray-item" role="menuitem" tabindex="-1" data-action="try">Try the wheel\u2026</div>
+      <div id="pause-item" class="fw-tray-item fw-tray-item--has-sub" role="menuitem" tabindex="-1" data-action="pause">
+        <span id="pause-label">Pause</span>
+        <span class="fw-tray-chevron">\u203A</span>
+      </div>
+      <div class="fw-tray-item" role="menuitem" tabindex="-1" data-action="settings">Settings\u2026</div>
+      <div class="fw-tray-divider"></div>
+      <div class="fw-tray-item" role="menuitem" tabindex="-1" data-action="quit">Quit Orbit</div>
+    </div>
+
+    <!-- Pause submenu -->
+    <div id="pause-submenu" class="fw-tray-submenu" role="menu" aria-label="Pause duration" style="display:none;">
+      <div class="fw-tray-subitem" role="menuitem" tabindex="-1" data-pause="hour">For 1 hour</div>
+      <div class="fw-tray-subitem" role="menuitem" tabindex="-1" data-pause="tomorrow">Until tomorrow</div>
+      <div class="fw-tray-subitem" role="menuitem" tabindex="-1" data-pause="indefinite">Until I resume</div>
+    </div>
+  </div>
+
+  <script src="./tray-menu.js"></script>
+</body>
+</html>

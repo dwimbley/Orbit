@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <title>Orbit</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="./confirm.css">
+</head>
+<body>
+  <div id="confirm" class="fw-confirm" style="display:none;">
+    <!-- Header -->
+    <div class="fw-confirm-header">
+      <div class="fw-confirm-warning-tile">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F1CF7A" stroke-width="2" stroke-linecap="round">
+          <path d="M4 17l6-6-6-6M12 19h8"/>
+        </svg>
+      </div>
+      <div id="confirm-title" class="fw-confirm-title"></div>
+    </div>
+
+    <!-- File chip -->
+    <div id="file-chip" class="fw-confirm-file-chip">
+      <span id="ext-tag" class="fw-confirm-ext-tag"></span>
+      <span id="file-name" class="fw-confirm-filename"></span>
+    </div>
+
+    <!-- Body description -->
+    <div id="confirm-body" class="fw-confirm-body"></div>
+
+    <!-- Notepad link (script types only) -->
+    <a id="notepad-link" class="fw-confirm-notepad-link" href="#" style="display:none;">Open in Notepad instead</a>
+
+    <!-- Buttons -->
+    <div class="fw-confirm-buttons">
+      <button id="btn-cancel" class="fw-confirm-btn fw-confirm-btn--cancel">Cancel</button>
+      <button id="btn-action" class="fw-confirm-btn fw-confirm-btn--danger"></button>
+    </div>
+  </div>
+
+  <script src="./confirm.js"></script>
+</body>
+</html>

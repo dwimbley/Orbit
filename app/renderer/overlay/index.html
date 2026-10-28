@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <title>Orbit</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="./overlay.css">
+</head>
+<body>
+  <div id="wheel-root" class="fw-wheel-root" style="display: none;">
+    <div id="wheel-container" class="fw-wheel-container">
+      <!-- Disc background -->
+      <div id="disc" class="fw-disc"></div>
+
+      <!-- Empty state rings (shown when no apps) -->
+      <svg id="empty-rings" class="fw-empty-rings" style="display: none;"></svg>
+
+      <!-- Wedge SVG layer -->
+      <svg id="wedges-svg" class="fw-wedges-svg"></svg>
+
+      <!-- Wedge labels layer -->
+      <div id="wedge-labels" class="fw-wedge-labels"></div>
+
+      <!-- Center circle -->
+      <div id="center" class="fw-center">
+        <div id="center-file" class="fw-center-file"></div>
+        <div id="center-open" class="fw-center-open" style="display: none;"></div>
+        <div id="center-cancel" class="fw-center-cancel" style="display: none;"></div>
+        <div id="center-empty" class="fw-center-empty" style="display: none;"></div>
+      </div>
+    </div>
+
+    <!-- Hint pill -->
+    <div id="hint-pill" class="fw-hint-pill"></div>
+  </div>
+
+  <script src="./overlay.js"></script>
+</body>
+</html>

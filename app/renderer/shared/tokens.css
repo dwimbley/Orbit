@@ -1,0 +1,166 @@
+/* Orbit Design Tokens — match spec section 3.1 exactly */
+:root {
+  /* Surfaces */
+  --fw-window-bg: #17171C;
+  --fw-title-bar: #131317;
+  --fw-sidebar: #121216;
+  --fw-card: #1E1E25;
+  --fw-inset-chip: #141418;
+  --fw-inset-stat: #17171C;
+  --fw-status-box: #1A1A20;
+  --fw-selected: #24232D;
+  --fw-window-border: #2C2C36;
+  --fw-divider: #26262E;
+  --fw-card-border: #2A2A33;
+  --fw-control-border: #3A3945;
+  --fw-icon-btn-border: #33333C;
+  --fw-popup-surface: rgba(28, 28, 34, 0.96);
+  --fw-popup-border: #36353F;
+
+  /* Text */
+  --fw-text-primary: #ECEAF2;
+  --fw-text-secondary: #C8C5D2;
+  --fw-text-muted: #A9A6B5;
+  --fw-text-body-dim: #B6B3C0;
+  --fw-text-faint: #8E8B98;
+  --fw-text-handle: #77747F;
+
+  /* Accent */
+  --fw-accent: #7C3AED;
+  --fw-accent-light: #A78BFA;
+  --fw-accent-text: #C9B8FF;
+  --fw-accent-badge: #B79CFF;
+  --fw-accent-on-dark: #E4DAFF;
+  --fw-accent-outline-border: #6D4BD8;
+  --fw-accent-outline-bg: rgba(124, 58, 237, 0.12);
+
+  /* Radio cards */
+  --fw-radio-selected-border: #7C5CE0;
+  --fw-radio-selected-bg: rgba(124, 58, 237, 0.09);
+  --fw-radio-unselected-border: #2A2A33;
+  --fw-radio-unselected-bg: #1A1A20;
+
+  /* Pinned */
+  --fw-pinned-border: #4E3A99;
+
+  /* Status colors */
+  --fw-success: #34C77B;
+  --fw-success-bg: rgba(52, 199, 123, 0.08);
+  --fw-success-border: rgba(52, 199, 123, 0.28);
+
+  --fw-warning: #E9B949;
+  --fw-warning-text: #F1CF7A;
+  --fw-warning-bg: rgba(233, 185, 73, 0.08);
+  --fw-warning-border: rgba(233, 185, 73, 0.35);
+
+  --fw-danger-border: #A8485A;
+  --fw-danger-text: #FFB4C0;
+
+  --fw-error-stroke: #FF9AAB;
+  --fw-error-bg: rgba(255, 120, 140, 0.14);
+
+  /* Focus */
+  --fw-focus-ring: #A78BFA;
+  --fw-focus-offset: 2px;
+  --fw-focus-width: 2px;
+
+  /* Wheel */
+  --fw-disc-bg: rgba(18, 18, 24, 0.82);
+  --fw-disc-border: rgba(255, 255, 255, 0.09);
+  --fw-disc-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 0, 0, 0.35);
+  --fw-wedge-fill: rgba(255, 255, 255, 0.055);
+  --fw-wedge-special-fill: rgba(255, 255, 255, 0.025);
+  --fw-wedge-stroke: rgba(255, 255, 255, 0.08);
+  --fw-wedge-hover-fill: #7C3AED;
+  --fw-wedge-hover-stroke: #A78BFA;
+  --fw-wedge-kb-stroke: #FFFFFF;
+  --fw-center-fill: rgba(255, 255, 255, 0.035);
+  --fw-center-border: rgba(255, 255, 255, 0.08);
+  --fw-center-hover-fill: rgba(255, 255, 255, 0.11);
+  --fw-center-hover-border: rgba(255, 255, 255, 0.40);
+
+  /* Hint pill */
+  --fw-pill-bg: rgba(18, 18, 24, 0.86);
+  --fw-pill-border: rgba(255, 255, 255, 0.09);
+  --fw-pill-sep: #5E5C68;
+  --fw-keycap-border: #4A4855;
+
+  /* Popup */
+  --fw-popup-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  --fw-popup-hover: #2C2A38;
+  --fw-popup-divider: #2E2D37;
+
+  /* Dialog */
+  --fw-dialog-bg: #1C1C22;
+  --fw-dialog-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+  --fw-backdrop: rgba(10, 10, 14, 0.9);
+
+  /* Fonts */
+  --fw-font-ui: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --fw-font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Fira Code', monospace;
+
+  /* Motion */
+  --fw-ease-reveal: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --fw-duration-reveal: 160ms;
+  --fw-duration-hover: 140ms;
+  --fw-duration-fill: 120ms;
+  --fw-duration-hide: 120ms;
+  --fw-duration-toggle: 120ms;
+
+  /* Monogram tile colors (deterministic from app id hash) */
+  --fw-mono-0: #2F6FE4;
+  --fw-mono-1: #0E8C8A;
+  --fw-mono-2: #6E5A45;
+  --fw-mono-3: #C8532A;
+  --fw-mono-4: #B23A64;
+  --fw-mono-5: #4560C9;
+  --fw-mono-6: #6A4BB8;
+  --fw-mono-7: #3A3D46;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --fw-duration-reveal: 0ms;
+    --fw-duration-hover: 0ms;
+    --fw-duration-fill: 0ms;
+    --fw-duration-hide: 0ms;
+    --fw-duration-toggle: 0ms;
+  }
+}
+
+/* Base reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fw-font-ui);
+  color: var(--fw-text-primary);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, select, input, textarea {
+  font-family: inherit;
+}
+
+a {
+  color: var(--fw-accent-text);
+}
+
+a:hover {
+  color: var(--fw-accent-on-dark);
+}
+
+/* Focus visible */
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: var(--fw-focus-width) solid var(--fw-focus-ring);
+  outline-offset: var(--fw-focus-offset);
+}

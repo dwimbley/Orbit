@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "lib": ["ES2022"],
+    "outDir": "dist",
+    "rootDir": ".",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "sourceMap": true
+  },
+  "include": [
+    "app/main/**/*.ts",
+    "app/preload/**/*.ts",
+    "packages/core/src/**/*.ts",
+    "platform/**/*.ts",
+    "catalog/schema.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "native",
+    "tests",
+    "app/renderer/**/*.ts"
+  ]
+}

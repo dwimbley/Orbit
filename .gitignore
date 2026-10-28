@@ -1,0 +1,33 @@
+node_modules/
+dist/
+out/
+*.node
+build/
+Release/
+Debug/
+.vs/
+*.tsbuildinfo
+*.corrupt-*.json
+
+# Native build artifacts
+native/filewheel-native/build/
+native/filewheel-native/prebuilds/
+
+# Electron Builder output
+release/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# IDE
+.idea/
+.vscode/settings.json
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+filewheel-design-reference/
+docs/

@@ -1,0 +1,622 @@
+[
+  {
+    "id": "photos",
+    "name": "Photos",
+    "detection": {
+      "packageFamily": "Microsoft.Windows.Photos_8wekyb3d8bbwe"
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "paint",
+    "name": "Paint",
+    "detection": {
+      "packageFamily": "Microsoft.Paint_8wekyb3d8bbwe",
+      "knownPaths": ["%WINDIR%\\System32\\mspaint.exe"]
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "notepad",
+    "name": "Notepad",
+    "detection": {
+      "packageFamily": "Microsoft.WindowsNotepad_8wekyb3d8bbwe",
+      "knownPaths": ["%WINDIR%\\System32\\notepad.exe"]
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "mediaplayer",
+    "name": "Media Player",
+    "detection": {
+      "packageFamily": "Microsoft.ZuneMusic_8wekyb3d8bbwe"
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "moviestv",
+    "name": "Films & TV",
+    "detection": {
+      "packageFamily": "Microsoft.ZuneVideo_8wekyb3d8bbwe"
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "wmp",
+    "name": "Windows Media Player Legacy",
+    "detection": {
+      "knownPaths": ["%ProgramFiles%\\Windows Media Player\\wmplayer.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "clipchamp",
+    "name": "Clipchamp",
+    "detection": {
+      "packageFamily": "Clipchamp.Clipchamp_yxz26nhyzhsrt"
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "snipping",
+    "name": "Snipping Tool",
+    "detection": {
+      "packageFamily": "Microsoft.ScreenSketch_8wekyb3d8bbwe"
+    },
+    "args": "{files}",
+    "multi": false
+  },
+  {
+    "id": "explorer",
+    "name": "File Explorer",
+    "detection": {
+      "knownPaths": ["%WINDIR%\\explorer.exe"]
+    },
+    "args": "{folder}",
+    "multi": false
+  },
+  {
+    "id": "terminal",
+    "name": "Terminal",
+    "detection": {
+      "packageFamily": "Microsoft.WindowsTerminal_8wekyb3d8bbwe",
+      "exe": "wt.exe"
+    },
+    "args": "-d {folder}",
+    "multi": false
+  },
+  {
+    "id": "edge",
+    "name": "Microsoft Edge",
+    "detection": {
+      "exe": "msedge.exe"
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "chrome",
+    "name": "Google Chrome",
+    "detection": {
+      "exe": "chrome.exe"
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "firefox",
+    "name": "Firefox",
+    "detection": {
+      "exe": "firefox.exe"
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "fontview",
+    "name": "Font Viewer",
+    "detection": {
+      "knownPaths": ["%WINDIR%\\System32\\fontview.exe"]
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "paintdotnet",
+    "name": "Paint.NET",
+    "detection": {
+      "exe": "paintdotnet.exe",
+      "uninstallRegex": "^paint\\.net",
+      "knownPaths": ["%ProgramFiles%\\paint.net\\paintdotnet.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "gimp",
+    "name": "GIMP",
+    "detection": {
+      "exe": "gimp-*.exe",
+      "uninstallRegex": "^GIMP",
+      "knownPaths": [
+        "%ProgramFiles%\\GIMP *\\bin\\gimp-*.exe",
+        "%LOCALAPPDATA%\\Programs\\GIMP *\\bin\\gimp-*.exe"
+      ]
+    },
+    "args": "{files}",
+    "multi": true,
+    "excludeExePatterns": ["gimp-console-.*\\.exe", "gimp-debug-.*\\.exe"]
+  },
+  {
+    "id": "krita",
+    "name": "Krita",
+    "detection": {
+      "exe": "krita.exe",
+      "uninstallRegex": "^Krita",
+      "knownPaths": ["%ProgramFiles%\\Krita (x64)\\bin\\krita.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "photoshop",
+    "name": "Adobe Photoshop",
+    "detection": {
+      "exe": "Photoshop.exe",
+      "knownPaths": ["%ProgramFiles%\\Adobe\\Adobe Photoshop *\\Photoshop.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "illustrator",
+    "name": "Adobe Illustrator",
+    "detection": {
+      "exe": "Illustrator.exe",
+      "knownPaths": ["%ProgramFiles%\\Adobe\\Adobe Illustrator *\\Support Files\\Contents\\Windows\\Illustrator.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "premiere",
+    "name": "Adobe Premiere Pro",
+    "detection": {
+      "exe": "Adobe Premiere Pro.exe",
+      "knownPaths": ["%ProgramFiles%\\Adobe\\Adobe Premiere Pro *\\Adobe Premiere Pro.exe"]
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "acrobat",
+    "name": "Adobe Acrobat",
+    "detection": {
+      "exe": "Acrobat.exe",
+      "knownPaths": ["%ProgramFiles%\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "affinityphoto",
+    "name": "Affinity Photo",
+    "detection": {
+      "exe": "Photo.exe",
+      "uninstallRegex": "^Affinity Photo",
+      "knownPaths": ["%ProgramFiles%\\Affinity\\Photo 2\\Photo.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "affinitydesigner",
+    "name": "Affinity Designer",
+    "detection": {
+      "exe": "Designer.exe",
+      "uninstallRegex": "^Affinity Designer",
+      "knownPaths": ["%ProgramFiles%\\Affinity\\Designer 2\\Designer.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "affinity",
+    "name": "Affinity",
+    "detection": {
+      "exe": "Affinity.exe",
+      "uninstallRegex": "^Affinity$"
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "irfanview",
+    "name": "IrfanView",
+    "detection": {
+      "exe": "i_view64.exe",
+      "uninstallRegex": "^IrfanView",
+      "knownPaths": ["%ProgramFiles%\\IrfanView\\i_view64.exe"]
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "xnviewmp",
+    "name": "XnView MP",
+    "detection": {
+      "exe": "xnviewmp.exe",
+      "uninstallRegex": "^XnView MP",
+      "knownPaths": ["%ProgramFiles%\\XnViewMP\\xnviewmp.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "imageglass",
+    "name": "ImageGlass",
+    "detection": {
+      "exe": "ImageGlass.exe",
+      "uninstallRegex": "^ImageGlass"
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "darktable",
+    "name": "darktable",
+    "detection": {
+      "exe": "darktable.exe",
+      "uninstallRegex": "^darktable",
+      "knownPaths": ["%ProgramFiles%\\darktable\\bin\\darktable.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "rawtherapee",
+    "name": "RawTherapee",
+    "detection": {
+      "exe": "rawtherapee.exe",
+      "uninstallRegex": "^RawTherapee",
+      "knownPaths": ["%ProgramFiles%\\RawTherapee\\*\\rawtherapee.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "inkscape",
+    "name": "Inkscape",
+    "detection": {
+      "exe": "inkscape.exe",
+      "uninstallRegex": "^Inkscape",
+      "knownPaths": ["%ProgramFiles%\\Inkscape\\bin\\inkscape.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "blender",
+    "name": "Blender",
+    "detection": {
+      "exe": "blender.exe",
+      "uninstallRegex": "^Blender",
+      "knownPaths": ["%ProgramFiles%\\Blender Foundation\\Blender *\\blender.exe"]
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "vlc",
+    "name": "VLC media player",
+    "detection": {
+      "exe": "vlc.exe",
+      "uninstallRegex": "^VLC media player",
+      "knownPaths": ["%ProgramFiles%\\VideoLAN\\VLC\\vlc.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "mpchc",
+    "name": "MPC-HC",
+    "detection": {
+      "exe": "mpc-hc64.exe",
+      "uninstallRegex": "^MPC-HC",
+      "knownPaths": ["%ProgramFiles%\\MPC-HC\\mpc-hc64.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "potplayer",
+    "name": "PotPlayer",
+    "detection": {
+      "exe": "PotPlayerMini64.exe",
+      "uninstallRegex": "^PotPlayer",
+      "knownPaths": ["%ProgramFiles%\\DAUM\\PotPlayer\\PotPlayerMini64.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "foobar",
+    "name": "foobar2000",
+    "detection": {
+      "exe": "foobar2000.exe",
+      "uninstallRegex": "^foobar2000",
+      "knownPaths": ["%ProgramFiles%\\foobar2000\\foobar2000.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "audacity",
+    "name": "Audacity",
+    "detection": {
+      "exe": "Audacity.exe",
+      "uninstallRegex": "^Audacity",
+      "knownPaths": ["%ProgramFiles%\\Audacity\\Audacity.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "resolve",
+    "name": "DaVinci Resolve",
+    "detection": {
+      "exe": "Resolve.exe",
+      "uninstallRegex": "^DaVinci Resolve",
+      "knownPaths": ["%ProgramFiles%\\Blackmagic Design\\DaVinci Resolve\\Resolve.exe"]
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "shotcut",
+    "name": "Shotcut",
+    "detection": {
+      "exe": "shotcut.exe",
+      "uninstallRegex": "^Shotcut",
+      "knownPaths": ["%ProgramFiles%\\Shotcut\\shotcut.exe"]
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "kdenlive",
+    "name": "Kdenlive",
+    "detection": {
+      "exe": "kdenlive.exe",
+      "uninstallRegex": "^Kdenlive",
+      "knownPaths": ["%ProgramFiles%\\kdenlive\\bin\\kdenlive.exe"]
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "sumatra",
+    "name": "SumatraPDF",
+    "detection": {
+      "exe": "SumatraPDF.exe",
+      "uninstallRegex": "^SumatraPDF",
+      "knownPaths": [
+        "%LOCALAPPDATA%\\SumatraPDF\\SumatraPDF.exe",
+        "%ProgramFiles%\\SumatraPDF\\SumatraPDF.exe"
+      ]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "word",
+    "name": "Word",
+    "detection": {
+      "exe": "WINWORD.EXE"
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "excel",
+    "name": "Excel",
+    "detection": {
+      "exe": "EXCEL.EXE"
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "powerpoint",
+    "name": "PowerPoint",
+    "detection": {
+      "exe": "POWERPNT.EXE"
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "outlook",
+    "name": "Outlook",
+    "detection": {
+      "exe": "OUTLOOK.EXE"
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "lo_writer",
+    "name": "LibreOffice Writer",
+    "detection": {
+      "exe": "swriter.exe",
+      "uninstallRegex": "^LibreOffice",
+      "knownPaths": ["%ProgramFiles%\\LibreOffice\\program\\swriter.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "lo_calc",
+    "name": "LibreOffice Calc",
+    "detection": {
+      "exe": "scalc.exe",
+      "knownPaths": ["%ProgramFiles%\\LibreOffice\\program\\scalc.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "lo_impress",
+    "name": "LibreOffice Impress",
+    "detection": {
+      "exe": "simpress.exe",
+      "knownPaths": ["%ProgramFiles%\\LibreOffice\\program\\simpress.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "lo_draw",
+    "name": "LibreOffice Draw",
+    "detection": {
+      "exe": "sdraw.exe",
+      "knownPaths": ["%ProgramFiles%\\LibreOffice\\program\\sdraw.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "vscode",
+    "name": "VS Code",
+    "detection": {
+      "exe": "Code.exe",
+      "uninstallRegex": "^Microsoft Visual Studio Code",
+      "knownPaths": [
+        "%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe",
+        "%ProgramFiles%\\Microsoft VS Code\\Code.exe"
+      ]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "notepadpp",
+    "name": "Notepad++",
+    "detection": {
+      "exe": "notepad++.exe",
+      "uninstallRegex": "^Notepad\\+\\+",
+      "knownPaths": ["%ProgramFiles%\\Notepad++\\notepad++.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "sublime",
+    "name": "Sublime Text",
+    "detection": {
+      "exe": "sublime_text.exe",
+      "uninstallRegex": "^Sublime Text",
+      "knownPaths": ["%ProgramFiles%\\Sublime Text*\\sublime_text.exe"]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "typora",
+    "name": "Typora",
+    "detection": {
+      "exe": "Typora.exe",
+      "uninstallRegex": "^Typora",
+      "knownPaths": ["%ProgramFiles%\\Typora\\Typora.exe"]
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "visualstudio",
+    "name": "Visual Studio",
+    "detection": {
+      "special": "vswhere"
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "rider",
+    "name": "JetBrains Rider",
+    "detection": {
+      "exe": "rider64.exe",
+      "uninstallRegex": "^JetBrains Rider",
+      "knownPaths": [
+        "%ProgramFiles%\\JetBrains\\JetBrains Rider *\\bin\\rider64.exe",
+        "%LOCALAPPDATA%\\Programs\\Rider\\bin\\rider64.exe"
+      ]
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "ssms",
+    "name": "SQL Server Management Studio",
+    "detection": {
+      "exe": "Ssms.exe",
+      "uninstallRegex": "^(Microsoft )?SQL Server Management Studio",
+      "knownPaths": [
+        "%ProgramFiles%\\Microsoft SQL Server Management Studio *\\Release\\Common7\\IDE\\Ssms.exe",
+        "%ProgramFiles(x86)%\\Microsoft SQL Server Management Studio *\\Common7\\IDE\\Ssms.exe"
+      ]
+    },
+    "args": "{files}",
+    "multi": true
+  },
+  {
+    "id": "dbbrowser",
+    "name": "DB Browser for SQLite",
+    "detection": {
+      "exe": "DB Browser for SQLite.exe",
+      "uninstallRegex": "^DB Browser for SQLite"
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "sevenzip",
+    "name": "7-Zip",
+    "detection": {
+      "exe": "7zFM.exe",
+      "uninstallRegex": "^7-Zip",
+      "knownPaths": ["%ProgramFiles%\\7-Zip\\7zFM.exe"]
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "winrar",
+    "name": "WinRAR",
+    "detection": {
+      "exe": "WinRAR.exe",
+      "uninstallRegex": "^WinRAR",
+      "knownPaths": ["%ProgramFiles%\\WinRAR\\WinRAR.exe"]
+    },
+    "args": "{file}",
+    "multi": false
+  },
+  {
+    "id": "calibre",
+    "name": "calibre E-book viewer",
+    "detection": {
+      "exe": "ebook-viewer.exe",
+      "uninstallRegex": "^calibre",
+      "knownPaths": ["%ProgramFiles%\\Calibre2\\ebook-viewer.exe"]
+    },
+    "args": "{file}",
+    "multi": false
+  }
+]

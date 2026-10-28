@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <title>Orbit Settings</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="./settings.css">
+</head>
+<body>
+  <!-- Frameless title bar -->
+  <div id="title-bar" class="fw-title-bar" style="-webkit-app-region: drag;">
+    <div class="fw-title-bar-left">
+      <svg class="fw-title-logo" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <circle cx="8" cy="8" r="7" stroke="#A78BFA" stroke-width="1.5" fill="none"/>
+        <circle cx="8" cy="8" r="3" fill="#A78BFA"/>
+      </svg>
+      <span class="fw-title-text">Orbit Settings</span>
+    </div>
+    <div class="fw-title-bar-controls" style="-webkit-app-region: no-drag;">
+      <button id="btn-minimize" class="fw-title-btn" aria-label="Minimize">
+        <svg width="12" height="12" viewBox="0 0 12 12"><rect x="1" y="5.5" width="10" height="1" fill="currentColor"/></svg>
+      </button>
+      <button id="btn-close" class="fw-title-btn fw-title-btn--close" aria-label="Close">
+        <svg width="12" height="12" viewBox="0 0 12 12"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main body -->
+  <div id="settings-body" class="fw-settings-body">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="fw-sidebar">
+      <div class="fw-sidebar-header">
+        <div class="fw-sidebar-logo-tile">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="8" stroke="#A78BFA" stroke-width="1.5" fill="none"/>
+            <circle cx="10" cy="10" r="3.5" fill="#A78BFA"/>
+          </svg>
+        </div>
+        <div class="fw-sidebar-header-text">
+          <span class="fw-sidebar-app-name">Orbit</span>
+          <span id="sidebar-version" class="fw-sidebar-version"></span>
+        </div>
+      </div>
+
+      <!-- Status box -->
+      <div id="status-box" class="fw-status-box">
+        <div class="fw-status-row">
+          <span id="status-dot" class="fw-status-dot"></span>
+          <span id="status-label" class="fw-status-label">Active</span>
+        </div>
+        <button id="btn-pause" class="fw-status-btn">Pause</button>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="fw-sidebar-nav" role="tablist">
+        <button class="fw-nav-btn" data-tab="activation" role="tab" aria-current="true">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v5l3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.3" fill="none"/></svg>
+          Activation
+        </button>
+        <button class="fw-nav-btn" data-tab="wheel" role="tab">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.3" fill="none"/><circle cx="8" cy="8" r="2.5" fill="currentColor"/></svg>
+          Wheel
+        </button>
+        <button class="fw-nav-btn" data-tab="applications" role="tab">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.2" fill="none"/><rect x="9" y="2" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.2" fill="none"/><rect x="2" y="9" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.2" fill="none"/><rect x="9" y="9" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+          Applications
+        </button>
+        <button class="fw-nav-btn" data-tab="history" role="tab">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 4h10M3 8h7M3 12h5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          History &amp; privacy
+        </button>
+      </nav>
+
+      <!-- Try the wheel -->
+      <button id="btn-try-wheel" class="fw-try-wheel-btn">Try the wheel&hellip;</button>
+    </aside>
+
+    <!-- Main content -->
+    <main id="content" class="fw-content" role="tabpanel"></main>
+  </div>
+
+  <script src="./settings.js"></script>
+</body>
+</html>
