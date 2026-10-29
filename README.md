@@ -4,36 +4,8 @@
 
 Drag a file out of Explorer, and a wheel appears around your cursor with apps that can open it. Drop on a wedge.
 
-## Screenshots
+![Orbit in action](screenshots/orbit_example.gif)
 
-<table>
-<tr>
-<td width="50%">
-
-**The wheel** — pops up mid-drag with apps for that file type.
-
-![Wheel](screenshots/wheel.png)
-
-</td>
-<td width="50%">
-
-**Settings** — configure activation, wheel size, and per-extension app lists.
-
-![Settings](screenshots/settings.png)
-
-</td>
-</tr>
-<tr>
-<td>
-
-**System tray** — pause, open settings, or quit.
-
-![Tray menu](screenshots/tray-menu.png)
-
-</td>
-
-</tr>
-</table>
 
 ## Install
 
